@@ -24,7 +24,7 @@ void setup()
                 {
                         pinMode(i, INPUT);
                 }
-        pinMode(M2, OUTPUT);
+        pinMode(M1, OUTPUT);
         pinMode(M2, OUTPUT);
 
 }
@@ -44,8 +44,8 @@ int getCurrentPos()
         for(int i=2;i<9;i++)
                 {
                         int j = digitalRead(i);
-                        if(j==1)
-                                return j;
+                        if(j==HIGH)
+                                return i;
                  }
 }//getting the current position as an integer
 
