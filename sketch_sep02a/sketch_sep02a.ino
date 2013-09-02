@@ -15,7 +15,8 @@ int speed2;
 int M1 = 10;
 int M2 = 11;
 const int targetPos = 4;
-
+int Mm1 = 9;
+int Mm2 = 12;
 //end global variable declaration
 
 void setup()
@@ -24,8 +25,13 @@ void setup()
                 {
                         pinMode(i, INPUT);
                 }
+        pinMode(M1, OUTPUT);
         pinMode(M2, OUTPUT);
-        pinMode(M2, OUTPUT);
+        pinMode(Mm1, OUTPUT);
+        pinMode(Mm2, OUTPUT);
+
+        digitalWrite(Mm1, LOW);
+        digitalWrite(Mm2, LOW);
 
 }
 
@@ -44,7 +50,7 @@ int getCurrentPos()
         for(int i=2;i<9;i++)
                 {
                         int j = digitalRead(i);
-                        if(j==1)
+                        if(j==HIGH)
                                 return i;
                  }
 }//getting the current position as an integer
