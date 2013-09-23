@@ -25,7 +25,7 @@ int speed2;
 
 // connected to motor driver
 int MH1 = A0;
-int MH2 = A0;
+int MH2 = A1;
 int ML1 = A2;
 int ML2 = A3;
 int E1 = 9;
